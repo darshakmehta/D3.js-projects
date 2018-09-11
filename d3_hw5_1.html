@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The University of North Carolina at Charlotte</title>
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+</head>
+<body>
+	<script type="text/javascript">
+	var dataset = [{number:5, color:"red",text:"The University of North Carolina at Charlotte, also known as UNC Charlotte"},
+                  {number:10, color:"green",text:"UNC Charlotte is a public research University"},  
+                  {number:15, color:"purple",text:"UNC Charlotte has three campuses"},
+                  {number:20, color:"blue",text:"UNC Charlotte is the largest institution of higher education in the Charlotte region"},
+                  {number:25, color:"pink",text:"UNC Charlotte nickname is 49ers"}];
+
+		d3.select("body")
+		  .selectAll("p")
+		  .data(dataset)
+		  .enter()
+		  .append("p")
+		  .text(function (d)
+		  {return d.text})
+		  .style("color",function(d) {return d.color});
+	</script>
+</body>
+</html>

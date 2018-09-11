@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Building</title>
+	<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		var canvas = d3.select("body")
+			.append("svg")
+			.attr("width",800)
+			.attr("height",800);
+
+		var rectangle1 =  canvas.append("rect")
+			.attr("x",100)
+			.attr("y",200)
+			.attr("width",200)
+			.attr("height",400)
+			.attr("fill","white")
+			.attr("stroke","lightgrey")
+			.attr("stroke-width",3);
+
+		var line1 = canvas.append("line")
+			.attr("x1",100)
+			.attr("y1",200)
+			.attr("x2",400)
+			.attr("y2",0)
+			.attr("stroke","lightgrey")
+			.attr("stroke-width",3);
+
+		var line2 = canvas.append("line")
+			.attr("x1",300)
+			.attr("y1",200)
+			.attr("x2",600)
+			.attr("y2",0)
+			.attr("stroke","lightgrey")
+			.attr("stroke-width",3);
+
+		var line3 = canvas.append("line")
+			.attr("x1",400)
+			.attr("y1",0)
+			.attr("x2",600)
+			.attr("y2",0)
+			.attr("stroke","lightgrey")
+			.attr("stroke-width",3);
+
+		var line4 = canvas.append("line")
+			.attr("x1",600)
+			.attr("y1",0)
+			.attr("x2",600)
+			.attr("y2",400)
+			.attr("stroke","lightgrey")
+			.attr("stroke-width",3);
+
+		var line5 = canvas.append("line")
+			.attr("x1",300)
+			.attr("y1",600)
+			.attr("x2",600)
+			.attr("y2",400)
+			.attr("stroke","lightgrey")
+			.attr("stroke-width",3);
+
+		var value1 = 15;
+		for(i = 0; i < 12 ;i++){
+		var line6 = canvas.append("line")
+			.attr("x1",100 + value1)
+			.attr("y1",200)
+			.attr("x2",400 + value1)
+			.attr("y2",0)
+			.attr("stroke","lightgrey")
+			.attr("stroke-width",3)
+			.attr("stroke-opacity",1);
+		value1 = value1 + 15;			
+		}
+
+		var value2 = 60;
+		var value3 = 200;
+		for(i = 0; i < 4 ;i++){
+		var line7 = canvas.append("line")
+			.attr("x1",100 + value2)
+			.attr("y1",value3 - 40)
+			.attr("x2",300 + value2)
+			.attr("y2",value3 - 40)
+			.attr("stroke","lightgrey")
+			.attr("stroke-width",3)
+			.attr("stroke-opacity",1);
+		value2 = value2 + 60;			
+		value3 = value3 - 40;
+		}
+
+		var line8 = canvas.append("line")
+			.attr("x1",205)
+			.attr("y1",200)
+			.attr("x2",200)
+			.attr("y2",600)
+			.attr("stroke","lightgrey")
+			.attr("stroke-width",3)		
+			.attr("stroke-opacity",1);
+
+		var value4 = 50;
+		for(i=0;i<7;i++){
+		var line9 = canvas.append("line")
+			.attr("x1",100)
+			.attr("y1",200+value4)
+			.attr("x2",300)
+			.attr("y2",200 + value4)
+			.attr("stroke","lightgrey")
+			.attr("stroke-width",3)	
+			.attr("stroke-opacity",1);
+		value4 = value4 + 50;
+		}
+		//Some great shape
+		/*var value5 = 520;
+		var value6 = 50;
+		for(i=0;i<7;i++){
+		var line9 = canvas.append("line")
+			.attr("x1",300)
+			.attr("y1",value5-20)
+			.attr("x2",600)
+			.attr("y2",value6)
+			.attr("stroke","lightgrey")
+			.attr("stroke-width",3);	
+		value5 = value5 - 50;
+		value6 = value6 + 50; 
+		}*/
+
+		var value5 = 550;
+		var value6 = 350;
+		for(i=0;i<7;i++){
+		var line10 = canvas.append("line")
+			.attr("x1",300)
+			.attr("y1",value5)
+			.attr("x2",600)
+			.attr("y2",value6)
+			.attr("stroke","lightgrey")
+			.attr("stroke-width",3)
+			.attr("stroke-opacity",1);	
+		value5 = value5 - 50;
+		value6 = value6 - 50;
+		}
+
+		var value7 = 60;
+		var value8 = 200;
+		for(i = 0; i < 4 ;i++){
+		var line11 = canvas.append("line")
+			.attr("x1",300 + value7)
+			.attr("y1",value8 - 40)
+			.attr("x2",300 + value7)
+			.attr("y2",value8 + 360)
+			.attr("stroke","lightgrey")
+			.attr("stroke-width",3)
+			.attr("stroke-opacity",1);
+		value7 = value7 + 60;			
+		value8 = value8 - 40;
+		}
+	
+		var value9 = 210;
+		var value_9 = 360;
+		for(j=0;j<5;j++){
+			value9 = value9 - (j*40);
+			for(i=0; i<8; i++) {
+			var line12 = canvas.append("line")
+				.attr("x1",value_9)
+				.attr("y1",value9)
+				.attr("x2",value_9 - 60)
+				.attr("y2",value9)
+				.attr("stroke","lightgrey")
+				.attr("stroke-width",3)
+				.attr("stroke-opacity",1);
+			value9 = value9 + 50;
+			}
+		value_9 = value_9 + 60;
+		value9 = 210;
+		}
+
+		var value10 = 210;
+		var value_10 = 300;
+		for(j=0;j<5;j++){
+			value10 = value10 - (j*40);
+			for(i=0; i<8; i++) {
+			var line13 = canvas.append("line")
+				.attr("x1",value_10)
+				.attr("y1",value10)
+				.attr("x2",value_10 - 140)
+				.attr("y2",value10)
+				.attr("stroke-dasharray","5,5")
+				.attr("stroke-width",2)
+				.attr("stroke","pink")
+				.attr("stroke-opacity",0.7);
+			value10 = value10 + 50;
+		}
+			value_10 = value_10 + 60;
+			value10 = 210;
+		}
+
+		var value11 = 0;
+		var value12 = 50;
+		var value_11 = 210;
+		var value_x1 = 160;
+		var value_y2 = 200;
+		for(j=0;j<5	;j++){
+			for(i=0; i<8; i++) {
+			var line14 = canvas.append("line")
+				.attr("x1",value_x1)
+				.attr("y1",value_11 + value11)
+				.attr("x2",value_x1 - 60)
+				.attr("y2",value_y2 + value12)
+				.attr("stroke-dasharray","5,5")
+				.attr("stroke-width",2)
+				.attr("stroke","pink")
+				.attr("stroke-opacity",0.7);
+			value11 = value11 + 50;
+			value12 = value12 + 50;
+			}
+			value11 = 0;
+			value12 = 50;
+			value_11 = value_11 - 40;
+			value_x1 = value_x1 + 60;
+			value_y2 = value_y2 - 40;
+		}
+
+		var value13 = 60;
+		var value14 = 160;
+		for(i=0;i<5;i++){
+		var line15 = canvas.append("line")
+			.attr("x1",100 + value13)
+			.attr("y1",value14)
+			.attr("x2",100 + value13)
+			.attr("y2",400 + value14)
+			.attr("stroke-dasharray","5,5")
+			.attr("stroke-width",2)
+			.attr("stroke","lightblue")
+			.attr("stroke-opacity",1);
+		value13 = value13 + 60;
+		value14 = value14 - 40;
+		}
+
+	</script>
+</body>
+</html>
